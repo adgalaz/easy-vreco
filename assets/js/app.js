@@ -1,5 +1,5 @@
 function initMap() {
-  var laboratoriaSCL = {lat: -33.418750, lng: -70.641694};
+  var laboratoriaSCL = {lat: -33.4188557, lng: -70.6422274};
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 18,
     center: laboratoriaSCL
@@ -16,23 +16,25 @@ function findMe(){
     navigator.geolocation.getCurrentPosition(localizacion, error);
   } 
 //creando funcion de localizacion para obtener longitud y latitud
+  var latitud, longitud
   function localizacion(posicion){
-    var latitude = posicion.coords.latitude;
-    var longitude = posicion.coords.longitude;
+    latitud = posicion.coords.latitude;
+    longitud = posicion.coords.longitude;
     var miUbicacion = new google.maps.Marker({
-    position: {lat: latitude, lng: longitude},
+    position: {lat: latitud, lng: longitud},
     map: map
     })
-    //map.setZoom(18),
-    //map.setCenter({lat: latitude, lng: longitude})
+    map.setZoom(18),
+    map.setCenter({lat: latitud, lng: longitud})
   }
 
 //creando funcion por si se genera un error
   function error(){
     alert('No se pudo obtener tu ubicación');  
   }
+  document.getElementById('encuentrame').addEventListener('click',findMe);
 }
-document.getElementById('encuentrame').addEventListener('click',findMe);
+
 
 window.onload = function(){
   var inputPartida = document.getElementById('punto-partida');
