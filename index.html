@@ -1,35 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>easy-vreco</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Easy-vreco</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 col-md-12 col-lg-12 ">
-        <button id="encuentrame" type="button" class="btn btn-primary">Encuentráme</button>
-        <input id="punto-partida" type="text">
-        <input id="punto-destino" type="text">
-        <button id="trazar-ruta" type="button" class="btn btn-primary">Ruta</button>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12 col-md-12 col-lg-12 ">
-        <div id="map"></div>
-      </div>
-    </div>
-  </div>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <h1 class="display-5">Easy-vreco</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                    <button id="buscar" type="button" class="btn btn-outline-secondary">Buscar</button>
+                </div>
+                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                    <div class="input-group mb-3">
+                        <input id="origen" type="text" class="form-control" placeholder="Origen" aria-label="Origen" aria-describedby="basic-addon2">
+                        <input id="destino" type="text" class="form-control" placeholder="Destino" aria-label="Destino" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button id="ruta" class="btn btn-outline-secondary" type="button">Ruta</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div id="map">
+                        <!--Imagen del mapa-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!--Script-->
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvIiNoWQlS4nC4fcpDsrnHjLaqABi8-jo&libraries=places&callback=initMap" async defer></script>
-  <script src="assets/js/app.js"></script>   
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe8GWJguTjQmhWGWG-pKsq6Sud80LjxKo&callback=initMap&libraries=places"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="assets/js/app.js"></script>
 </body>
+
 </html>
